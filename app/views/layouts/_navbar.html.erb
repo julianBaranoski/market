@@ -1,7 +1,9 @@
 <!-- app/views/layouts/_navbar.html.erb -->
 <nav class="green">
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo center"><img src="<%= image_path('carrinho-de-compras.png') %>" alt="Carrinho de Compras"</a>
+    <a href="#" class="brand-logo center">
+      <img src="<%= image_path('carrinho-de-compras.png') %>" alt="Carrinho de Compras">
+    </a>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
       <li><%= link_to 'Itens', items_path, class: 'waves-effect waves-light white-text valign-wrapper nav-btn' unless current_page?(items_path) %></li>
       <li><%= link_to 'Categorias', categories_path, class: 'waves-effect waves-light white-text valign-wrapper nav-btn' unless current_page?(categories_path) %></li>

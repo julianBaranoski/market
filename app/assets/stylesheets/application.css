@@ -18,8 +18,18 @@
 
 
  .check-mark {
-    color: green; /* ou qualquer cor desejada */
+    color: green; 
     font-size: 18px;
     margin-left: 5px;
   }
 
+#nav-mobile {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#nav-mobile li {
+  margin-top: auto;
+  margin-bottom: auto;
+}
