@@ -1,0 +1,16 @@
+<!-- app/views/items/show.html.erb -->
+<div class="row">
+  <h1 class="col s12">Item Details</h1>
+
+  <div class="col s12 m6">
+    <p><strong>Nome:</strong> <%= @item.name %></p>
+    <p><strong>Quantidade:</strong> <%= @item.quantity %></p>
+    <p><strong>Categoria:</strong> <%= @item.category.name if @item.category.present? %></p>
+    <p><strong>Comprado:</strong> <%= @item.purchased ? 'Comprado' : 'Não Comprado' %></p>
+  </div>
+
+  <div class="col s12 m6">
+    <%= link_to 'Edit', edit_item_path(@item), class: 'btn waves-effect waves-light btn-white-text' %>
+    <%= link_to 'Back', items_path, class: 'btn waves-effect waves-light btn-white-text' %>
+  </div>
+</div>

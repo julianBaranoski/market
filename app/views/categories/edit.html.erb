@@ -1,0 +1,13 @@
+<!-- app/views/categories/edit.html.erb -->
+<div class="row">
+  <h1 class="col s12">Editing Category</h1>
+
+  <div class="col s12 m6">
+    <%= render 'form', category: @category %>
+  </div>
+
+  <div class="col s12 m6">
+    <%= link_to 'Show', @category, class: 'btn waves-effect waves-light btn-white-text' %>
+    <%= link_to 'Back', categories_path, class: 'btn waves-effect waves-light btn-white-text' %>
+  </div>
+</div>

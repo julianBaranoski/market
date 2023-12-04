@@ -1,0 +1,45 @@
+<!-- app/views/items/index.html.erb -->
+<div class="row">
+  <h1 class="col s12">Itens</h1>
+
+  <%= link_to 'New Item', new_item_path, class: 'btn waves-effect waves-light' %>
+  <%= link_to 'Manage Categories', categories_path, class: 'btn waves-effect waves-light' %>
+
+  <table class="highlight responsive-table striped">
+    <thead>
+      <tr>
+        <th>Nome do Item</th>
+        <th>Quantidade</th>
+        <th>Categoria</th>
+        <th>Comprado</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @items.each do |item| %>
+        <tr>
+          <td><%= item.name %></td>
+          <td><%= item.quantity %></td>
+          <td><%= item.category.name %></td>
+          <td>
+            <% if item.purchased? %>
+              Comprado
+            <% else %>
+              Não Comprado
+            <% end %>
+          </td>
+          <td>
+            <%= link_to 'Show', item, class: 'btn waves-effect waves-light btn-white-text' %>
+            <%= link_to 'Edit', edit_item_path(item), class: 'btn waves-effect waves-light btn-white-text' %>
+            <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn waves-effect waves-light btn-white-text' %>
+            <% if item.purchased? %>
+              <%= link_to 'Marcar como Não Comprado', { controller: 'items', action: 'mark_as_not_purchased', id: item.id }, method: :put, class: 'btn waves-effect waves-light btn-white-text' %>
+            <% else %>
+              <%= link_to 'Marcar como Comprado', { controller: 'items', action: 'mark_as_purchased', id: item.id }, method: :put, class: 'btn waves-effect waves-light btn-white-text' %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

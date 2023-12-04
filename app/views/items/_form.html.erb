@@ -1,0 +1,27 @@
+<!-- app/views/items/_form.html.erb -->
+<%= form_with(model: item, local: true) do |form| %>
+  <div class="input-field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="input-field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div class="input-field">
+    <%= form.collection_select :category_id, Category.all, :id, :name, { prompt: 'Selecione uma categoria' }, class: 'browser-default' %>
+  </div>
+
+  <div class="input-field">
+    <%= form.label :comprado, 'Comprado' %>
+    <%= form.check_box :comprado, class: 'filled-in item-checkbox', data: { 'item-id': item.id }, onchange: 'this.form.submit()' %>
+    <%= form.label :comprado, 'Comprado', class: 'checkbox-label' %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit 'Create', class: 'btn waves-effect waves-light btn-white-text' %>
+  </div>
+<% end %>

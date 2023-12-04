@@ -1,0 +1,12 @@
+<!-- app/views/items/new.html.erb -->
+<div class="row">
+  <h1 class="col s12">New Item</h1>
+
+  <div class="col s12 m6">
+    <%= render 'form', item: @item %>
+  </div>
+
+  <div class="col s12 m6">
+    <%= link_to 'Back', items_path, class: 'btn waves-effect waves-light btn-white-text' %>
+  </div>
+</div>
