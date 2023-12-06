@@ -1,17 +1,15 @@
 # app/controllers/items_controller.rb
 class ItemsController < ApplicationController
-  before_action :set_item, only: %i[show edit update destroy]
+  before_action :set_item, only: %i[show edit update destroy mark_as_purchased mark_as_not_purchased]
 
   def mark_as_purchased
-    @item = Item.find(params[:id])
-    @item.update(purchased: true)
-    redirect_to items_path, notice: 'Item marked as purchased.'
+    @item.mark_as_purchased
+    redirect_back(fallback_location: items_path, notice: 'Item marked as purchased.')
   end
 
   def mark_as_not_purchased
-    @item = Item.find(params[:id])
-    @item.update(purchased: false)
-    redirect_to items_path, notice: 'Item marked as not purchased.'
+    @item.mark_as_not_purchased
+    redirect_back(fallback_location: items_path, notice: 'Item marked as not purchased.')
   end
 
   def index

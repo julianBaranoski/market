@@ -8,13 +8,13 @@
   <table class="highlight responsive-table striped">
     <thead>
       <tr>
-        <th>Nome do Item</th>
-        <th>Quantidade</th>
-        <th>Categoria</th>
-        <th>Preço</th>
-        <th>Valor Total</th>
-        <th>Comprado</th>
-        <th>Ações</th>
+        <th>Item name</th>
+        <th>Quantity</th>
+        <th>Category</th>
+        <th>Purchased</th>
+        <th>Price</th>
+        <th>Total price</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -22,24 +22,24 @@
         <tr>
           <td><%= item.name %></td>
           <td><%= item.quantity %></td>
-          <td><%= number_to_currency(item.price, unit: 'R$', format: '%n') %></td>
-          <td><%= number_to_currency(item.total_value, unit: 'R$', format: '%n') %></td>
-          <td><%= item.category.name %></td>
+          <td><%= item.category&.name %></td>
           <td>
             <% if item.purchased? %>
-              Comprado
+              Purchased
             <% else %>
-              Não Comprado
+              Not purchased
             <% end %>
           </td>
+          <td><%= number_to_currency(item.price, unit: 'R$', format: '%n') %></td>
+          <td><%= number_to_currency(item.total_value, unit: 'R$', format: '%n') %></td>
           <td>
             <%= link_to 'Show', item, class: 'btn waves-effect waves-light btn-white-text' %>
             <%= link_to 'Edit', edit_item_path(item), class: 'btn waves-effect waves-light btn-white-text' %>
             <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn waves-effect waves-light btn-white-text' %>
             <% if item.purchased? %>
-              <%= link_to 'Marcar como Não Comprado', { controller: 'items', action: 'mark_as_not_purchased', id: item.id }, method: :put, class: 'btn waves-effect waves-light btn-white-text' %>
+              <%= link_to 'Mark as Purchased', { controller: 'items', action: 'mark_as_not_purchased', id: item.id }, method: :put, class: 'btn waves-effect waves-light btn-white-text' %>
             <% else %>
-              <%= link_to 'Marcar como Comprado', { controller: 'items', action: 'mark_as_purchased', id: item.id }, method: :put, class: 'btn waves-effect waves-light btn-white-text' %>
+              <%= link_to 'Mark as not Purchased', { controller: 'items', action: 'mark_as_purchased', id: item.id }, method: :put, class: 'btn waves-effect waves-light btn-white-text' %>
             <% end %>
           </td>
         </tr>
