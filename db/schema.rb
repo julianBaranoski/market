@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_12_04_164853) do
+ActiveRecord::Schema.define(version: 2023_12_05_231953) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 2023_12_04_164853) do
     t.boolean "purchased"
     t.integer "category_id"
     t.integer "comprado"
+    t.decimal "price", precision: 10, scale: 2
+    t.decimal "total_value", precision: 10, scale: 2
     t.index ["category_id"], name: "index_items_on_category_id"
   end
 

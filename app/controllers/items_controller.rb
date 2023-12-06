@@ -29,6 +29,10 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
 
+    quantity = params[:item][:quantity].to_i
+    price = params[:item][:price].to_f
+    @item.total_value = quantity * price
+
     if @item.save
       redirect_to @item, notice: 'Item was successfully created.'
     else
@@ -62,8 +66,9 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:name, :quantity, :purchased, :category_id)
+    params.require(:item).permit(:name, :quantity, :price, :category_id)
   end
+  
 
   
 end

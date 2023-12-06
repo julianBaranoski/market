@@ -7137,3 +7137,1687 @@ Processing by ItemsController#index as HTML
 Completed 200 OK in 142ms (Views: 133.2ms | ActiveRecord: 2.0ms)
 
 
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddPriceAndTotalValueToItems (20231205231953)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddPriceAndTotalValueToItems (20231205231953)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "items" ADD "price" decimal(10,2)[0m
+  ↳ db/migrate/20231205231953_add_price_and_total_value_to_items.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "items" ADD "total_value" decimal(10,2)[0m
+  ↳ db/migrate/20231205231953_add_price_and_total_value_to_items.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231205231953"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 10.0.2.2 at 2023-12-05 23:25:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.6.10/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-2.6.10/gems/railties-5.2.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.6.10/gems/railties-5.2.8/lib/rails/templates/rails/welcome/index.html.erb (8.5ms)
+Completed 200 OK in 30ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-05 23:25:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (69.3ms)
+Started GET "/itms" for 10.0.2.2 at 2023-12-05 23:25:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/itms"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 1572ms (Views: 1531.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-05 23:25:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 81ms (Views: 74.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2023-12-05 23:26:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (98.2ms)
+  Rendered items/new.html.erb within layouts/application (132.4ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 202ms (Views: 183.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-05 23:26:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GLpNes5qw+tGaRMH6hvtVq2UL02bu89rFvoA9WsDCxU3ICf1lg4grpeYuy5ulaSYJmAFynr9uTs/ahSaQAZ+zw==", "item"=>{"name"=>"teste", "quantity"=>"2", "category_id"=>"1", "comprado"=>"0", "price"=>"12"}, "commit"=>"Create"}
+Unpermitted parameters: :comprado, :price
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:32
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:32
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (4.0ms)
+  Rendered items/new.html.erb within layouts/application (38.6ms)
+  Rendered layouts/_navbar.html.erb (7.1ms)
+Completed 200 OK in 234ms (Views: 228.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-05 23:26:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7bqvbwUMlpt5moAUd1/SZrvG7r4WVljSfT5W0ScrgDT6js5cWK9D3Xl1Ag/3tdvKfiqd14kxKJQWylW/5DxGyw==", "item"=>{"name"=>"teste", "quantity"=>"2", "category_id"=>"1", "comprado"=>"1", "price"=>"0.05"}}
+Unpermitted parameters: :comprado, :price
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:32
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:32
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.0ms)
+  Rendered items/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navbar.html.erb (3.1ms)
+Completed 200 OK in 75ms (Views: 70.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories" for 10.0.2.2 at 2023-12-05 23:26:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:14
+  Rendered categories/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navbar.html.erb (2.7ms)
+Completed 200 OK in 87ms (Views: 66.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-05 23:26:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 128ms (Views: 92.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories" for 10.0.2.2 at 2023-12-05 23:26:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:14
+  Rendered categories/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 58ms (Views: 51.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-05 23:26:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 69ms (Views: 64.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2023-12-05 23:55:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.4ms)
+  Rendered items/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 87ms (Views: 62.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-05 23:55:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bXQ2rVO8qRdGyheSIgepwZX0jx0hLmwhj6TGkqoZzUtC7lwiC9hKUpc7v7umieAPHgClmsBoGnGmNNL9gRy4kQ==", "item"=>{"name"=>"teste2", "quantity"=>"12", "category_id"=>"1", "comprado"=>"0", "price"=>"10"}, "commit"=>"Create"}
+Unpermitted parameters: :comprado, :price
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:32
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:32
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.6ms)
+  Rendered items/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 81ms (Views: 75.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-05 23:56:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K1mpcsQTQXEN+AX9jxjAV3/4dk7AD1HtMV4m3cjpsHs8bchBmbCUNw0Xh+YP8sn7uhQFJ19oIataqiWzC/52hA==", "item"=>{"name"=>"teste2", "quantity"=>"6", "category_id"=>"1", "comprado"=>"0", "price"=>"10"}, "commit"=>"Create"}
+Unpermitted parameters: :comprado, :price
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:32
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:32
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.5ms)
+  Rendered items/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 77ms (Views: 65.9ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-05 23:57:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vkaEPsANiHLNoMlLIKbSsj4kzQz+rU2sXM4el8B4s2ipcuUNna5dNM1PS1CgTNse+8i+ZWHKPeo3Oh35A291lw==", "item"=>{"name"=>"teste2", "quantity"=>"6", "category_id"=>"1", "comprado"=>"1", "price"=>""}}
+Unpermitted parameters: :comprado, :price
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:32
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:32
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.3ms)
+  Rendered items/new.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_navbar.html.erb (3.2ms)
+Completed 200 OK in 72ms (Views: 64.7ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (6.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "created_at", "updated_at", "category_id", "price") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "teste2"], ["quantity", 6], ["created_at", "2023-12-05 23:59:39.198241"], ["updated_at", "2023-12-05 23:59:39.198241"], ["category_id", 1], ["price", 10.0]]
+  [1m[36mItem Update (0.1ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = ?, "total_value" = ? WHERE "items"."id" = ?[0m  [["updated_at", "2023-12-05 23:59:39.206462"], ["total_value", 60.0], ["id", 8]]
+  [1m[35m (9.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (6.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "created_at", "updated_at", "category_id", "price") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "teste2"], ["quantity", 6], ["created_at", "2023-12-06 00:00:53.701645"], ["updated_at", "2023-12-06 00:00:53.701645"], ["category_id", 1], ["price", 10.0]]
+  [1m[36mItem Update (0.2ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = ?, "total_value" = ? WHERE "items"."id" = ?[0m  [["updated_at", "2023-12-06 00:00:53.709851"], ["total_value", 60.0], ["id", 8]]
+  [1m[35m (10.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (9.0ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "created_at", "updated_at", "category_id", "price") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "teste2"], ["quantity", 6], ["created_at", "2023-12-06 00:01:35.250318"], ["updated_at", "2023-12-06 00:01:35.250318"], ["category_id", 1], ["price", 10.0]]
+  [1m[36mItem Update (0.2ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = ?, "total_value" = ? WHERE "items"."id" = ?[0m  [["updated_at", "2023-12-06 00:01:35.260864"], ["total_value", 60.0], ["id", 8]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:02:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.6.10/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (110.7ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 829ms (Views: 814.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/items/3/edit" for 10.0.2.2 at 2023-12-06 00:02:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61
+  Rendering items/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (59.4ms)
+  Rendered items/edit.html.erb within layouts/application (62.6ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 129ms (Views: 114.1ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/items/3" for 10.0.2.2 at 2023-12-06 00:02:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MCtkRfnJzjER85VlghL1INimTZpFVrvV7C/+8sGuD//6NeaD0N87Loxzxv6Rv4RpidzlLSu7MG14M3HDGNDetQ==", "item"=>{"name"=>"Cenoura", "quantity"=>"3", "category_id"=>"1", "comprado"=>"0", "price"=>"10"}, "commit"=>"Create", "id"=>"3"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61
+Unpermitted parameters: :comprado, :price
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:46
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:46
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:46
+  Rendering items/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.1ms)
+  Rendered items/edit.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navbar.html.erb (2.7ms)
+Completed 200 OK in 64ms (Views: 59.8ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/items/3" for 10.0.2.2 at 2023-12-06 00:02:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cqM7cb0I6o4UMFxnfOD/loUuf7ixPae+pIk07cpyXUlll1pC4Ks/yBTf3nz8CvY6QMIM0S5a1/jPfTeDCWWbtg==", "item"=>{"name"=>"Cenoura", "quantity"=>"3", "category_id"=>"1", "comprado"=>"0", "price"=>"0.02"}, "commit"=>"Create", "id"=>"3"}
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61
+Unpermitted parameters: :comprado, :price
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:46
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:46
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:46
+  Rendering items/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (4.7ms)
+  Rendered items/edit.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 65ms (Views: 57.8ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/items/3" for 10.0.2.2 at 2023-12-06 00:02:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YyqEENi8q1MFCX0WGg4gYjqNA+XdeCCCEsocqVtcanJ0HuUjhR9+FQXm/w2a5CnO/2FwjEIfUMR5Ph/HmEusjQ==", "item"=>{"name"=>"Cenoura", "quantity"=>"3", "category_id"=>"1", "comprado"=>"0", "price"=>""}, "commit"=>"Create", "id"=>"3"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61
+Unpermitted parameters: :comprado, :price
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:46
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:46
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:46
+  Rendering items/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.3ms)
+  Rendered items/edit.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 67ms (Views: 61.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:02:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 75ms (Views: 69.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/items/3" for 10.0.2.2 at 2023-12-06 00:02:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:8
+  Rendered items/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 94ms (Views: 61.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:02:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 64ms (Views: 59.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items/3" for 10.0.2.2 at 2023-12-06 00:02:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:8
+  Rendered items/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navbar.html.erb (2.6ms)
+Completed 200 OK in 57ms (Views: 52.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:02:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 81ms (Views: 74.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/items/3/edit" for 10.0.2.2 at 2023-12-06 00:02:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61
+  Rendering items/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.0ms)
+  Rendered items/edit.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 70ms (Views: 64.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items/3/edit" for 10.0.2.2 at 2023-12-06 00:03:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.6.10/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61
+  Rendering items/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (16.0ms)
+  Rendered items/edit.html.erb within layouts/application (21.2ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 351ms (Views: 325.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:03:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (18.1ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 93ms (Views: 87.1ms | ActiveRecord: 1.3ms)
+
+
+Started PUT "/items/3/mark_as_purchased" for 10.0.2.2 at 2023-12-06 00:03:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#mark_as_purchased as HTML
+  Parameters: {"authenticity_token"=>"3ybC+0C1JPCtb9dFua1hWYbLG03DX41KmlrQamLnNh/IEqPIHRbxtq2AVV45R2j1QydoJFw4/QzxrtMEofDw4A==", "id"=>"3"}
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:7
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:7
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:7
+Redirected to http://localhost:3000/items
+Completed 302 Found in 9ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:03:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_navbar.html.erb (3.0ms)
+Completed 200 OK in 70ms (Views: 65.0ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/items/3/mark_as_purchased" for 10.0.2.2 at 2023-12-06 00:03:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#mark_as_purchased as HTML
+  Parameters: {"authenticity_token"=>"fHT3OcG7khGkY00b8hKSYy3te+Zogjt7lUpKEAHV/btrQJYKnBhHV6SMzwBy+JvP6AEIj/flSz3+vkl+wsI7RA==", "id"=>"3"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:7
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:7
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:7
+Redirected to http://localhost:3000/items
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:03:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 62ms (Views: 57.5ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/items/7/mark_as_not_purchased" for 10.0.2.2 at 2023-12-06 00:03:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#mark_as_not_purchased as HTML
+  Parameters: {"authenticity_token"=>"KCSSHxXBpZrX1tM++ztI+Pwh6CqHiFaJK5MiCQwnubw/EPMsSGJw3Nc5USV70UFUOc2bQxjvJs9AZyFnzzB/Qw==", "id"=>"7"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:13
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:13
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:13
+Redirected to http://localhost:3000/items
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:03:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_navbar.html.erb (3.2ms)
+Completed 200 OK in 72ms (Views: 66.8ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/items/7/mark_as_not_purchased" for 10.0.2.2 at 2023-12-06 00:03:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#mark_as_not_purchased as HTML
+  Parameters: {"authenticity_token"=>"GkSgJSxJK/60T2xGKiiqjOjdbdca0fSlvT69OaVgH34NcMEWcer+uLSg7l2qwqMgLTEevoW2hOPWyr5XZnfZgQ==", "id"=>"7"}
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:13
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:13
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:13
+Redirected to http://localhost:3000/items
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:03:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 72ms (Views: 68.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items/3" for 10.0.2.2 at 2023-12-06 00:03:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:8
+  Rendered items/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 56ms (Views: 50.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:03:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_navbar.html.erb (3.7ms)
+Completed 200 OK in 74ms (Views: 68.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2023-12-06 00:03:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (2.9ms)
+  Rendered items/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-06 00:04:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6SzUsLQzue201vsqaCCxLZJ0S89ii7EJcMhgbQPF7NbGtr4/7FdaqGUnUwPsrvjjGYBhSIPNx1lZWHQCKMCZDA==", "item"=>{"name"=>"suco", "quantity"=>"2", "category_id"=>"1", "price"=>"0.18"}, "commit"=>"Create"}
+Unpermitted parameter: :price
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:32
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:32
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (2.8ms)
+  Rendered items/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 84ms (Views: 78.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:08:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.6.10/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (32.2ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 709ms (Views: 695.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/items/3/edit" for 10.0.2.2 at 2023-12-06 00:08:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (8.5ms)
+  Rendered items/edit.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 78ms (Views: 65.7ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/items/3" for 10.0.2.2 at 2023-12-06 00:08:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/UxXhOyNEaWC1kMxjj3PqT0yeaLI/WRKgINbxKAagJw3UtVCxZvkuh9WEKqdkL7gbEjRFaYQ7/IUn9T1eWRR1g==", "item"=>{"name"=>"Cenoura", "quantity"=>"2", "category_id"=>"1", "price"=>"5"}, "commit"=>"Create", "id"=>"3"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+Unpermitted parameter: :price
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:50
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:50
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:50
+  Rendering items/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (2.9ms)
+  Rendered items/edit.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 74ms (Views: 67.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/items/3" for 10.0.2.2 at 2023-12-06 00:09:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.6.10/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:8
+  Rendered items/show.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 465ms (Views: 443.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:09:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_navbar.html.erb (3.5ms)
+Completed 200 OK in 78ms (Views: 72.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items/3/edit" for 10.0.2.2 at 2023-12-06 00:09:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (9.9ms)
+  Rendered items/edit.html.erb within layouts/application (14.4ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 77ms (Views: 70.3ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/items/3" for 10.0.2.2 at 2023-12-06 00:10:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Roveoh63YdDYaHPdwIr5nKfvlqBacNOb0bXYsx6siTaMlVxkN6GUz0XoIEbTJ4jV9pU+FzSdWCNFqVeCx9JYfA==", "item"=>{"name"=>"Cenoura", "quantity"=>"2", "category_id"=>"1", "price"=>"10"}, "commit"=>"Create", "id"=>"3"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:50
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:50
+  [1m[36mItem Update (2.8ms)[0m  [1m[33mUPDATE "items" SET "quantity" = ?, "price" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["quantity", 2], ["price", 10.0], ["updated_at", "2023-12-06 00:10:10.190549"], ["id", 3]]
+  ↳ app/controllers/items_controller.rb:50
+  [1m[36mItem Update (0.1ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = ?, "total_value" = ? WHERE "items"."id" = ?[0m  [["updated_at", "2023-12-06 00:10:10.196359"], ["total_value", 20.0], ["id", 3]]
+  ↳ app/models/item.rb:15
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:50
+Redirected to http://localhost:3000/items/3
+Completed 302 Found in 28ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/items/3" for 10.0.2.2 at 2023-12-06 00:10:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:8
+  Rendered items/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 63ms (Views: 57.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:10:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 70ms (Views: 65.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/items/3/edit" for 10.0.2.2 at 2023-12-06 00:10:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.2ms)
+  Rendered items/edit.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 78ms (Views: 73.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:10:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_navbar.html.erb (3.7ms)
+Completed 200 OK in 98ms (Views: 89.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items/3/edit" for 10.0.2.2 at 2023-12-06 00:10:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.5ms)
+  Rendered items/edit.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 67ms (Views: 61.1ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/items/3" for 10.0.2.2 at 2023-12-06 00:10:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pBhdl32g2BKr7//rCdt7f0Yxf6wVHD8paBvJyujSWEFuBt9RVLYtDTZvrHAadgo2F0vXG3vxtJH8B0b7MayJCw==", "item"=>{"name"=>"Cenoura", "quantity"=>"2", "category_id"=>"1", "price"=>"5"}, "commit"=>"Create", "id"=>"3"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:50
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:50
+  [1m[36mItem Update (6.1ms)[0m  [1m[33mUPDATE "items" SET "price" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["price", 5.0], ["updated_at", "2023-12-06 00:10:42.406449"], ["id", 3]]
+  ↳ app/controllers/items_controller.rb:50
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:50
+Redirected to http://localhost:3000/items/3
+Completed 302 Found in 16ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/items/3" for 10.0.2.2 at 2023-12-06 00:10:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:8
+  Rendered items/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navbar.html.erb (2.8ms)
+Completed 200 OK in 69ms (Views: 61.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/items/3" for 10.0.2.2 at 2023-12-06 00:11:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.6.10/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:8
+  Rendered items/show.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 648ms (Views: 625.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:11:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 81ms (Views: 75.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2023-12-06 00:11:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (8.2ms)
+  Rendered items/new.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 67ms (Views: 62.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-06 00:12:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KmGdXpuVd+1tTAayc3/HKe1sopni738cuubtohJdn+MF+/fRw/GUqLy9rpv38Y7nZpiIHgOpCUyTdvnNOVjqOQ==", "item"=>{"name"=>"teste", "quantity"=>"2", "category_id"=>"", "price"=>"4"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.0ms)
+  Rendered items/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-06 00:12:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9wMzQck4t/1Zl++0sA4Tb11thz3B6pdu0I4VKi+Ey5PgN1JylJtiu1l4ba8w5BrDmIH0VF6N5yi7ehZE7JMNbA==", "item"=>{"name"=>"teste", "quantity"=>"2", "category_id"=>"", "price"=>"4"}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.1ms)
+  Rendered items/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navbar.html.erb (3.1ms)
+Completed 200 OK in 92ms (Views: 89.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-06 00:12:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ewKEajx9R+o0rDLoosVS9IUoiiCGkVF3+dGL5xULyupsNuVZYd6SrDRDsPMiL1tYQMT5SRn2ITGSJYiJ1hwMFQ==", "item"=>{"name"=>"teste", "quantity"=>"2", "category_id"=>"", "price"=>"4"}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (4.8ms)
+  Rendered items/new.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 74ms (Views: 70.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:12:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.6.10/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (34.0ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 711ms (Views: 695.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2023-12-06 00:12:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (10.5ms)
+  Rendered items/new.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 76ms (Views: 69.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-06 00:12:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SgkZBTH5lu00QxDgnoU2Jizz8SlvHeXa9EV5Dh5ymWVlk3OKaZ11qOWyuMkaC3/opwfbro5bk4rd1W1hNXfsvw==", "item"=>{"name"=>"te", "quantity"=>"1", "category_id"=>"", "price"=>"10"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.2ms)
+  Rendered items/new.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 69ms (Views: 66.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-06 00:12:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YwjOzCqjHRa3Pt70xBd3niYFBrBnN3pFHCSUs2zVp9F0PK//dwDIULfRXO9E/X4y4+l12fhQCgN30Jfdr8JhLg==", "item"=>{"name"=>"te", "quantity"=>"1", "category_id"=>"", "price"=>"10"}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.0ms)
+  Rendered items/new.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:14:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.6.10/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (34.1ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 674ms (Views: 658.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2023-12-06 00:15:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (9.5ms)
+  Rendered items/new.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 71ms (Views: 64.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-06 00:15:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b0VLUrQWBHlXkZzR/C3BOj4qCmZGxt50ExswGPnd7tNA3yHd7HLnPIZgNPh4o4j0td4g4aeAqCQ6iyR30tibCQ==", "item"=>{"name"=>"coca", "quantity"=>"2", "category_id"=>"1", "price"=>"4"}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36
+  [1m[36mItem Create (2.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "created_at", "updated_at", "category_id", "price", "total_value") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "coca"], ["quantity", 2], ["created_at", "2023-12-06 00:15:12.660529"], ["updated_at", "2023-12-06 00:15:12.660529"], ["category_id", 1], ["price", 4.0], ["total_value", 8.0]]
+  ↳ app/controllers/items_controller.rb:36
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+Redirected to http://localhost:3000/items/9
+Completed 302 Found in 12ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/items/9" for 10.0.2.2 at 2023-12-06 00:15:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:8
+  Rendered items/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (3.3ms)
+Completed 200 OK in 71ms (Views: 63.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:15:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 82ms (Views: 76.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2023-12-06 00:15:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (2.9ms)
+  Rendered items/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 68ms (Views: 63.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:15:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 68ms (Views: 60.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2023-12-06 00:15:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (2.9ms)
+  Rendered items/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 60ms (Views: 56.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-06 00:15:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9EV+fmKKeydaH3gXRJZtPSQnx82IZRs8LuNMKOnCBBTb3xTxOu6YYovu0D7AGCTzr9PtSmkjbWwHc1hHwsdxzg==", "item"=>{"name"=>"ju", "quantity"=>"2", "category_id"=>"2", "price"=>"10"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36
+  [1m[36mItem Create (1.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "created_at", "updated_at", "category_id", "price", "total_value") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "ju"], ["quantity", 2], ["created_at", "2023-12-06 00:15:35.581971"], ["updated_at", "2023-12-06 00:15:35.581971"], ["category_id", 2], ["price", 10.0], ["total_value", 20.0]]
+  ↳ app/controllers/items_controller.rb:36
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+Redirected to http://localhost:3000/items/10
+Completed 302 Found in 18ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/items/10" for 10.0.2.2 at 2023-12-06 00:15:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:8
+  Rendered items/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 70ms (Views: 65.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:15:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 68ms (Views: 62.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2023-12-06 00:15:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (2.8ms)
+  Rendered items/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 63ms (Views: 59.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2023-12-06 00:18:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.6.10/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (32.7ms)
+  Rendered items/new.html.erb within layouts/application (37.4ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 792ms (Views: 765.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-06 00:18:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bbDJrUqlGcPGGkcBLCPNAR/7En6MNyBqoFDHo65LYCx6hKieFwbMhcb1xRqsycSt2hdhFxNQUCzLpMTNbVym0w==", "item"=>{"name"=>"a", "quantity"=>"2", "category_id"=>"1", "price"=>"5"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36
+  [1m[36mItem Create (2.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "created_at", "updated_at", "category_id", "price", "total_value") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "a"], ["quantity", 2], ["created_at", "2023-12-06 00:18:40.329464"], ["updated_at", "2023-12-06 00:18:40.329464"], ["category_id", 1], ["price", 5.0], ["total_value", 10.0]]
+  ↳ app/controllers/items_controller.rb:36
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+Redirected to http://localhost:3000/items/11
+Completed 302 Found in 19ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/items/11" for 10.0.2.2 at 2023-12-06 00:18:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:8
+  Rendered items/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+Completed 200 OK in 64ms (Views: 59.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:18:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 72ms (Views: 67.6ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/items/11" for 10.0.2.2 at 2023-12-06 00:18:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3A0AkQDrxl3lEN8fTeSzUBkjPaeiefF+vHjlcRS6+1/LOWGiXUgTG+X/XQTNDrr83M9Ozj0egTjXjOYf1609oA==", "id"=>"11"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:58
+  [1m[36mItem Destroy (6.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/items_controller.rb:58
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:58
+Redirected to http://localhost:3000/items
+Completed 302 Found in 15ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:18:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_navbar.html.erb (3.8ms)
+Completed 200 OK in 87ms (Views: 80.9ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/items/10" for 10.0.2.2 at 2023-12-06 00:18:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zImB4nLbPQ7GFMb7hH4CYci7h5VsdSpInpvlFA/xFeHbveDRL3joSMb7ROAElAvNDVf0/PMSWg71b+Z6zObTHg==", "id"=>"10"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:58
+  [1m[36mItem Destroy (2.0ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/items_controller.rb:58
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:58
+Redirected to http://localhost:3000/items
+Completed 302 Found in 11ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:18:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+Completed 200 OK in 77ms (Views: 71.8ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/items/9" for 10.0.2.2 at 2023-12-06 00:18:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4BWB6sY5f8ekasHZdbHMBHAOwRRvZrmJf+QWmH/m0TH3IeDZm5qqgaSFQ8L1W8WoteKyffAByc8UEBX2vPEXzg==", "id"=>"9"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:58
+  [1m[36mItem Destroy (6.7ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/items_controller.rb:58
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:58
+Redirected to http://localhost:3000/items
+Completed 302 Found in 15ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:18:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_navbar.html.erb (2.6ms)
+Completed 200 OK in 79ms (Views: 71.2ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/items/8" for 10.0.2.2 at 2023-12-06 00:18:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JgKcjj7JyTkLJ5QWEsXdSUviXiBsXCNwrQv6HY8tc/sxNv29Y2ocfwvIFg2SL9Tljg4tSfM7UzbG//lzTDq1BA==", "id"=>"8"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:58
+  [1m[36mItem Destroy (7.0ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/items_controller.rb:58
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:58
+Redirected to http://localhost:3000/items
+Completed 302 Found in 14ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:18:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 66ms (Views: 62.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/items/7" for 10.0.2.2 at 2023-12-06 00:18:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4oDxUXkiqj9gLq4iFHf5hgFMN0peJTtQksaapFMThCT1tJBiJIF/eWDBLDmUnfAqxKBEI8FCSxb5MpnKkARC2w==", "id"=>"7"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:58
+  [1m[36mItem Destroy (6.7ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/items_controller.rb:58
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:58
+Redirected to http://localhost:3000/items
+Completed 302 Found in 17ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:18:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navbar.html.erb (4.4ms)
+Completed 200 OK in 86ms (Views: 80.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:22:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.6.10/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (31.8ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 737ms (Views: 719.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2023-12-06 00:22:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (7.9ms)
+  Rendered items/new.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 68ms (Views: 64.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2023-12-06 00:22:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MSqRK2/lvdR8b9IYZkJNOvP9CfKXqGPoX7gUGKxG2W4esPukN4Feka2eejHizAT0eAkjdXbuFbh2KAB3h0OstA==", "item"=>{"name"=>"coca", "quantity"=>"2", "category_id"=>"1", "price"=>"10"}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36
+  [1m[36mItem Create (2.0ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "created_at", "updated_at", "category_id", "price", "total_value") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "coca"], ["quantity", 2], ["created_at", "2023-12-06 00:22:25.861931"], ["updated_at", "2023-12-06 00:22:25.861931"], ["category_id", 1], ["price", 10.0], ["total_value", 20.0]]
+  ↳ app/controllers/items_controller.rb:36
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:36
+Redirected to http://localhost:3000/items/12
+Completed 302 Found in 16ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/items/12" for 10.0.2.2 at 2023-12-06 00:22:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:8
+  Rendered items/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 61ms (Views: 54.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:22:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 68ms (Views: 63.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items/3/edit" for 10.0.2.2 at 2023-12-06 00:22:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.1ms)
+  Rendered items/edit.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 78ms (Views: 73.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:22:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 74ms (Views: 67.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items/3/edit" for 10.0.2.2 at 2023-12-06 00:22:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/items/_form.html.erb:14
+  Rendered items/_form.html.erb (3.2ms)
+  Rendered items/edit.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 71ms (Views: 61.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:22:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 64ms (Views: 58.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items/3" for 10.0.2.2 at 2023-12-06 00:22:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:65
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:8
+  Rendered items/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 78ms (Views: 63.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2023-12-06 00:22:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:27
+  Rendered items/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 63ms (Views: 59.1ms | ActiveRecord: 0.7ms)
+
+

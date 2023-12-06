@@ -15,11 +15,20 @@
   </div>
 
   <div class="input-field">
-    <%= form.label :comprado, 'Comprado' %>
-    <%= form.check_box :comprado, class: 'filled-in item-checkbox', data: { 'item-id': item.id }, onchange: 'this.form.submit()' %>
-    <%= form.label :comprado, 'Comprado', class: 'checkbox-label' %>
+    <%# <%= form.label :comprado, 'Comprado' %>
+    <%#= form.check_box :comprado, class: 'filled-in item-checkbox', data: { 'item-id': item.id }, onchange: 'this.form.submit()' %>
+    <%#= form.label :comprado, 'Comprado', class: 'checkbox-label' %> %>
   </div>
 
+  <%= form.label :price %>
+  <%= form.number_field :price, step: '0.01', id: 'item_price' %>
+
+  <%= form.label :total_value, 'Total Value' %>
+  <%= form.text_field :total_value, readonly: true, disabled: true, id: 'item_total_value' %>
+
+  <div id="totalValueSection">
+    <strong>Total Value:</strong> <%= number_to_currency(@item.total_value) if @item.total_value.present? %>
+  </div>
 
   <div class="actions">
     <%= form.submit 'Create', class: 'btn waves-effect waves-light btn-white-text' %>
